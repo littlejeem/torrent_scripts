@@ -1,5 +1,5 @@
 ##################
-# torrentscripts #
+# torrent_scripts #
 ##################
 #
 # 
