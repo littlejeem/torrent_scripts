@@ -25,6 +25,9 @@ and add following line to run scripts at 9 every day
 There are four variables that need completing in config.sh
 
 ```TR_ADMIN="put your transmission username here"```
+
 ```TR_PASSWORD="put your transmission password here"```
+
 ```LIMIT_RATIO="" #100 equals 1:1 ratio, 200=2:1 etc etc```
+
 ```SEED_LIMIT_TIME="604800" #seed time in seconds, default is 7days```
