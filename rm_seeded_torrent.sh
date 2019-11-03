@@ -2,22 +2,15 @@
 LOG_FILE="local0.info"
 LOG_APP="rm_seeded_torrent"
 SCRIPT_PATH="/home/pi/bin/torrentscripts"
-source /home/pi/bin/torrentscripts/my_password.sh
-echo $TR_ADMIN
-echo $TR_PASSWORD
+source /home/pi/bin/torrentscripts/config.sh
 TORRENTLIST=`transmission-remote -n $TR_ADMIN:"$TR_PASSWORD" -l | sed -e '1d;$d;s/^ *//' | cut -s -d " " -f1`
-#real
-LIMIT_RATIO="100"
-#test
-#LIMIT_RATIO="50"
-#real
-SEED_LIMIT_TIME="604800" #equals 7 days
-#test
-#SEED_LIMIT_TIME="200000" #equals 7 days
-for ID in $TORRENTLIST 
+####################
+### begin script ###
+####################
+for ID in $TORRENTLIST
 do
         RATIO=`transmission-remote -n $TR_ADMIN:"$TR_PASSWORD" --torrent $ID --info  | grep "Ratio:" | cut -s -d ":" -f2`
-	echo $RATIO
+    echo $RATIO
         if [ $RATIO != "None" ]; then
                 INT_RATIO=`echo $RATIO '*100' | bc -l | awk -F '.' '{ print $1; exit; }'`
 		echo $INT_RATIO
