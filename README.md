@@ -1,20 +1,14 @@
-####################
 ### Introduction ###
-####################
 A set of scripts to take the administration out of seeding through transmission.
 
 Torrents will be removed if they hit the desired seeding time limit or ratio
 
-################
 ### Details ####
-################
 This set of scripts exists on the download machine with transmission-daemon and transmission-cli installed on it. Setting up a folder such as ```/home/$USER/bin/torrent_scripts``` is advised.
 
 Configuration is completed by editing variables in config.sh
 
-####################
 ### Installation ###
-####################
 Create a directory for the scripts to go into, eg
 mkdir ```/home/$USER/bin/torrent_scripts```
 where $USER is your user running transmission-daemon
@@ -27,9 +21,7 @@ and add following line to run scripts at 9 every day
 
 ```* 9 * * * /home/$USER/bin/torrent_scripts/rm_seeded_torrent.sh```
 
-#####################
 ### Configuration ###
-#####################
 There are four variables that need completing in config.sh
 
 ```TR_ADMIN="put your transmission username here"```
