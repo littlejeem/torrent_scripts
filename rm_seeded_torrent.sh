@@ -41,7 +41,7 @@ do
 			        REASON="time limit"
 			        echo "removing torrent $ID, name=${NAME:1}, reason=$REASON, ratio=$RATIO, seeded time=$SEEDING"
               . "$SCRIPT_PATH"/rm_torrent.sh "$ID" "$NAME" "$REASON"
-            fi
         fi
+     fi
 done
 exit 0
