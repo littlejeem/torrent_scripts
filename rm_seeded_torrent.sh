@@ -4,8 +4,7 @@
 ##############################
 ### set & import variables ###
 ##############################
-SCRIPT_PATH="/home/james_vbox/bin/torrent_scripts"
-source "$SCRIPT_PATH"/config.sh
+source "$HOME"/bin/torrent_scripts/config.sh
 TORRENTLIST=`transmission-remote -n "$TR_ADMIN":"$TR_PASSWORD" -l | sed -e '1d;$d;s/^ *//' | cut -s -d " " -f1`
 #
 #
@@ -35,12 +34,12 @@ do
           #logger -p $LOG_FILE -t $LOG_APP "removing torrent $ID, name=${NAME:1}, ratio=$RATIO"
 			    REASON="1:1 Seed Complete"
 			    echo "removing torrent $ID, name=${NAME:1}, reason=$REASON, ratio=$RATIO, seeded time=$SEEDING"
-          . "$SCRIPT_PATH"/rm_torrent.sh "$ID" "$NAME" "$REASON"
+          . "$HOME"/bin/torrent_scripts/rm_torrent.sh "$ID" "$NAME" "$REASON"
             elif [[ "$PERIOD" -ge "$SEED_LIMIT_TIME" ]];
             then
 			        REASON="time limit"
 			        echo "removing torrent $ID, name=${NAME:1}, reason=$REASON, ratio=$RATIO, seeded time=$SEEDING"
-              . "$SCRIPT_PATH"/rm_torrent.sh "$ID" "$NAME" "$REASON"
+              . "$HOME"/bin/torrent_scripts/rm_torrent.sh "$ID" "$NAME" "$REASON"
         fi
      fi
 done
