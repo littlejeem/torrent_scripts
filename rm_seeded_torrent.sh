@@ -4,7 +4,7 @@
 ##############################
 ### set & import variables ###
 ##############################
-SCRIPT_PATH="/home/pi/bin/torrentscripts"
+SCRIPT_PATH="/home/james_vbox/bin/torrent_scripts"
 source "$SCRIPT_PATH"/config.sh
 TORRENTLIST=`transmission-remote -n "$TR_ADMIN":"$TR_PASSWORD" -l | sed -e '1d;$d;s/^ *//' | cut -s -d " " -f1`
 #
