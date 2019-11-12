@@ -9,17 +9,17 @@ This set of scripts exists on the download machine with transmission-daemon and 
 Configuration is completed by editing variables in config.sh
 
 ### Installation ###
-Create a directory for the scripts to go into, eg
+Create a directory for the scripts to go into and navigate to it, eg.
 ```bash
 mkdir -p $HOME/bin/
 cd $HOME/bin/
 ```
 
-use
+then (a) download or (b) clone the repository
 
 a)
 `wget --no-check-certificate --content-disposition https://github.com/littlejeem/torrent_scripts/archive/master.zip`
-....or if you are using git;
+
 b)
 `git clone https://github.com/littlejeem/torrent_scripts.git`
 
