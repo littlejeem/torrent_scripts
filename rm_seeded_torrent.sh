@@ -4,6 +4,7 @@
 ##############################
 ### set & import variables ###
 ##############################
+VERISON="1.0"
 source "$HOME"/bin/torrent_scripts/config.sh
 TORRENTLIST=`transmission-remote -n "$TR_ADMIN":"$TR_PASSWORD" -l | sed -e '1d;$d;s/^ *//' | cut -s -d " " -f1`
 #
