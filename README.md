@@ -12,7 +12,9 @@ Configuration is completed by editing variables in config.sh
 Create a directory for the scripts to go into, eg
 ```mkdir -p $HOME/bin/
 cd $HOME/bin/```
+
 use
+
 a)
 ```wget --no-check-certificate --content-disposition https://github.com/littlejeem/torrent_scripts/archive/master.zip```
 ....or if you are using git;
