@@ -18,13 +18,17 @@ cd $HOME/bin/
 then (a) download or (b) clone the repository
 
 a)
-`wget --no-check-certificate --content-disposition https://github.com/littlejeem/torrent_scripts/archive/master.zip`
+`wget --directory-prefix=torrent_scripts --no-check-certificate --content-disposition https://github.com/littlejeem/torrent_scripts/archive/master.zip`
 
 b)
 `git clone https://github.com/littlejeem/torrent_scripts.git`
 
 if a) then do:
-`INSERT OPTION HERE`
+```bash
+cd $HOME/bin/torrent_scripts/
+unzip -j torrent_scripts-master.zip
+rm torrent_scripts-master.zip
+```
 
 Now the script can be run manually (not a bad idea when testing) by running
 `/$HOME/bin/torrent_scripts/rm_seeded_torrent`
